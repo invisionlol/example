@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Prompt-Medium.ttf">
+            <string>Prompt-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Checkout View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="CheckoutViewController" id="BYZ-38-t0r" customClass="CheckoutViewController" customModule="BDS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kbf-mi-Kjr">
+                                <rect key="frame" x="16" y="44" width="343" height="724"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="leh-FJ-WBN">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="724"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EKS-xN-4pE" userLabel="product view" customClass="ShadowRoundView" customModule="BDS" customModuleProvider="target">
+                                                <rect key="frame" x="2" y="14" width="339" height="300"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="รายการสินค้า" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E9h-js-qGP">
+                                                        <rect key="frame" x="10" y="15" width="83.333333333333329" height="23"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="23" id="Zcg-bU-E7P"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Prompt-Medium" family="Prompt" pointSize="15"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ราคา" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJa-YI-ukJ">
+                                                        <rect key="frame" x="292" y="15.000000000000002" width="32" height="17.666666666666671"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="32" id="Ksa-AZ-sAB"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Prompt-Medium" family="Prompt" pointSize="15"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BnV-P8-zdJ" userLabel="Checkout List Table View">
+                                                        <rect key="frame" x="5" y="42" width="329" height="250"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="250" id="ZQd-ir-2vN"/>
+                                                        </constraints>
+                                                    </tableView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="จำนวน" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rGK-jn-QB9">
+                                                        <rect key="frame" x="187" y="15.000000000000002" width="50" height="17.666666666666671"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="50" id="OKP-Zc-JND"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Prompt-Medium" family="Prompt" pointSize="15"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="E9h-js-qGP" firstAttribute="leading" secondItem="EKS-xN-4pE" secondAttribute="leading" constant="10" id="1GK-mW-uiI"/>
+                                                    <constraint firstItem="BnV-P8-zdJ" firstAttribute="leading" secondItem="EKS-xN-4pE" secondAttribute="leading" constant="5" id="51o-lr-TYD"/>
+                                                    <constraint firstItem="hJa-YI-ukJ" firstAttribute="leading" secondItem="rGK-jn-QB9" secondAttribute="trailing" constant="55" id="61B-gj-vJR"/>
+                                                    <constraint firstAttribute="bottom" secondItem="BnV-P8-zdJ" secondAttribute="bottom" constant="8" id="8nH-dc-6Ah"/>
+                                                    <constraint firstAttribute="height" priority="250" constant="200" id="AE8-bu-G2n"/>
+                                                    <constraint firstAttribute="trailing" secondItem="hJa-YI-ukJ" secondAttribute="trailing" constant="15" id="Dme-2I-Gre"/>
+                                                    <constraint firstItem="hJa-YI-ukJ" firstAttribute="top" secondItem="EKS-xN-4pE" secondAttribute="top" constant="15" id="X37-4P-42T"/>
+                                                    <constraint firstAttribute="trailing" secondItem="BnV-P8-zdJ" secondAttribute="trailing" constant="5" id="fGC-M3-szc"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="300" id="kka-D5-pXU"/>
+                                                    <constraint firstItem="E9h-js-qGP" firstAttribute="top" secondItem="EKS-xN-4pE" secondAttribute="top" constant="15" id="v5d-qr-LYf"/>
+                                                    <constraint firstItem="rGK-jn-QB9" firstAttribute="top" secondItem="EKS-xN-4pE" secondAttribute="top" constant="15" id="w4T-kI-nwZ"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="22"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nF9-Z2-Hp6" userLabel="SummaryView" customClass="ShadowRoundView" customModule="BDS" customModuleProvider="target">
+                                                <rect key="frame" x="2" y="324" width="339" height="149"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="keY-dc-bFu">
+                                                        <rect key="frame" x="0.0" y="8" width="339" height="133"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qyx-x1-mie">
+                                                                <rect key="frame" x="0.0" y="0.0" width="339" height="18"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="{จำนวนเงิน}" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a1C-5n-L2S">
+                                                                        <rect key="frame" x="105" y="0.33333333333331439" width="224" height="17.666666666666668"/>
+                                                                        <fontDescription key="fontDescription" name="Prompt-Medium" family="Prompt" pointSize="15"/>
+                                                                        <color key="textColor" name="apGray2"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="จำนวนเงิน" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zKB-lm-Qyi">
+                                                                        <rect key="frame" x="10" y="0.33333333333331439" width="85" height="17.666666666666668"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="85" id="I0t-gD-PMz"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="Prompt-Medium" family="Prompt" pointSize="15"/>
+                                                                        <color key="textColor" name="apGray2"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="18" id="9uJ-eZ-Z34"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="a1C-5n-L2S" secondAttribute="trailing" constant="10" id="GRE-nA-6Os"/>
+                                                                    <constraint firstItem="zKB-lm-Qyi" firstAttribute="leading" secondItem="Qyx-x1-mie" secondAttribute="leading" constant="10" id="O3a-5D-bRI"/>
+                                                                    <constraint firstItem="a1C-5n-L2S" firstAttribute="leading" secondItem="zKB-lm-Qyi" secondAttribute="trailing" constant="10" id="Q1B-QM-v6e"/>
+                                                                    <constraint firstItem="a1C-5n-L2S" firstAttribute="centerY" secondItem="Qyx-x1-mie" secondAttribute="centerY" id="lVg-cJ-C3N"/>
+                                                                    <constraint firstItem="zKB-lm-Qyi" firstAttribute="centerY" secondItem="Qyx-x1-mie" secondAttribute="centerY" id="zFo-Qj-VbN"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j29-8T-Tzt">
+                                                                <rect key="frame" x="0.0" y="21" width="339" height="49"/>
+                                                                <subviews>
+                                                                    <tableView clipsSubviews="YES" tag="1" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wvZ-hI-Lka">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="339" height="49"/>
+                                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                    </tableView>
+                                                                </subviews>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="trailing" secondItem="wvZ-hI-Lka" secondAttribute="trailing" id="72T-kp-6zg"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="wvZ-hI-Lka" secondAttribute="bottom" id="88f-zm-FMj"/>
+                                                                    <constraint firstAttribute="height" priority="750" constant="30" id="K39-jg-fza"/>
+                                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" id="TtS-Zh-VkE"/>
+                                                                    <constraint firstItem="wvZ-hI-Lka" firstAttribute="top" secondItem="j29-8T-Tzt" secondAttribute="top" id="VJC-LP-vXe"/>
+                                                                    <constraint firstItem="wvZ-hI-Lka" firstAttribute="leading" secondItem="j29-8T-Tzt" secondAttribute="leading" id="ZVs-v9-VzP"/>
+                                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="500" id="dzf-qT-Z9A"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KXI-he-pLV">
+                                                                <rect key="frame" x="0.0" y="73" width="339" height="18"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="{ส่วนลด}" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2kA-Cn-GDi">
+                                                                        <rect key="frame" x="105" y="0.33333333333331439" width="224" height="17.666666666666668"/>
+                                                                        <fontDescription key="fontDescription" name="Prompt-Medium" family="Prompt" pointSize="15"/>
+                                                                        <color key="textColor" name="apGray2"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ส่วนลดรวม" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vu0-Fw-gF3">
+                                                                        <rect key="frame" x="10" y="0.33333333333331439" width="85" height="17.666666666666668"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="85" id="Vp2-dn-sv9"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="Prompt-Medium" family="Prompt" pointSize="15"/>
+                                                                        <color key="textColor" name="apGray2"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstItem="Vu0-Fw-gF3" firstAttribute="leading" secondItem="KXI-he-pLV" secondAttribute="leading" constant="10" id="DoX-m4-gQI"/>
+                                                                    <constraint firstAttribute="height" constant="18" id="HuG-hP-k8n"/>
+                                                                    <constraint firstItem="Vu0-Fw-gF3" firstAttribute="centerY" secondItem="KXI-he-pLV" secondAttribute="centerY" id="Kn3-ew-SMs"/>
+                                                                    <constraint firstItem="2kA-Cn-GDi" firstAttribute="centerY" secondItem="KXI-he-pLV" secondAttribute="centerY" id="NuJ-vl-QCE"/>
+                                                                    <constraint firstItem="2kA-Cn-GDi" firstAttribute="leading" secondItem="Vu0-Fw-gF3" secondAttribute="trailing" constant="10" id="Y0B-NZ-2aw"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="2kA-Cn-GDi" secondAttribute="trailing" constant="10" id="mzV-SZ-OVg"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xD4-Wm-7yG">
+                                                                <rect key="frame" x="0.0" y="94" width="339" height="18"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="{ค่าจัดส่ง}" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mv1-pS-JcI">
+                                                                        <rect key="frame" x="140" y="0.33333333333331439" width="189" height="17.666666666666668"/>
+                                                                        <fontDescription key="fontDescription" name="Prompt-Medium" family="Prompt" pointSize="15"/>
+                                                                        <color key="textColor" name="apGray2"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ค่าจัดส่งสินค้า" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O1E-RA-wp0">
+                                                                        <rect key="frame" x="10" y="0.33333333333331439" width="120" height="17.666666666666668"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="120" id="ELp-rz-p4G"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="Prompt-Medium" family="Prompt" pointSize="15"/>
+                                                                        <color key="textColor" name="apGray2"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstItem="O1E-RA-wp0" firstAttribute="leading" secondItem="xD4-Wm-7yG" secondAttribute="leading" constant="10" id="1Ge-K2-Geb"/>
+                                                                    <constraint firstAttribute="height" constant="18" id="Opc-jm-YbD"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="Mv1-pS-JcI" secondAttribute="trailing" constant="10" id="i8a-pZ-Faf"/>
+                                                                    <constraint firstItem="Mv1-pS-JcI" firstAttribute="leading" secondItem="O1E-RA-wp0" secondAttribute="trailing" constant="10" id="jbz-Fg-raZ"/>
+                                                                    <constraint firstItem="O1E-RA-wp0" firstAttribute="centerY" secondItem="xD4-Wm-7yG" secondAttribute="centerY" id="oqR-05-K4F"/>
+                                                                    <constraint firstItem="Mv1-pS-JcI" firstAttribute="centerY" secondItem="xD4-Wm-7yG" secondAttribute="centerY" id="vBr-RI-8py"/>
+                                                                </constraints>
+                                                            </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yfE-LD-8Wp">
+                                                                <rect key="frame" x="0.0" y="115" width="339" height="18"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" {รวมทั้งสิ้น}" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kob-kF-rMk">
+                                                                        <rect key="frame" x="105" y="0.33333333333331439" width="224" height="17.666666666666668"/>
+                                                                        <fontDescription key="fontDescription" name="Prompt-Medium" family="Prompt" pointSize="15"/>
+                                                                        <color key="textColor" name="apBlue"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="รวมทั้งสิ้น" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YFN-YO-dvV">
+                                                                        <rect key="frame" x="10" y="0.33333333333331439" width="85" height="17.666666666666668"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="85" id="hSk-dO-Por"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="Prompt-Medium" family="Prompt" pointSize="15"/>
+                                                                        <color key="textColor" name="apBlue"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="18" id="043-vY-cmF"/>
+                                                                    <constraint firstItem="Kob-kF-rMk" firstAttribute="centerY" secondItem="yfE-LD-8Wp" secondAttribute="centerY" id="MzT-a4-tpk"/>
+                                                                    <constraint firstItem="YFN-YO-dvV" firstAttribute="centerY" secondItem="yfE-LD-8Wp" secondAttribute="centerY" id="QsV-Z5-UFf"/>
+                                                                    <constraint firstItem="YFN-YO-dvV" firstAttribute="leading" secondItem="yfE-LD-8Wp" secondAttribute="leading" constant="10" id="Sbl-Vm-sjq"/>
+                                                                    <constraint firstItem="Kob-kF-rMk" firstAttribute="leading" secondItem="YFN-YO-dvV" secondAttribute="trailing" constant="10" id="kjx-vq-B0Y"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="Kob-kF-rMk" secondAttribute="trailing" constant="10" id="mMb-0w-8Ho"/>
+                                                                </constraints>
+                                                            </view>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="0D0-Fo-Gko"/>
+                                                    <constraint firstAttribute="trailing" secondItem="keY-dc-bFu" secondAttribute="trailing" id="6hY-Z4-z7S"/>
+                                                    <constraint firstItem="keY-dc-bFu" firstAttribute="leading" secondItem="nF9-Z2-Hp6" secondAttribute="leading" id="VL2-44-6Ph"/>
+                                                    <constraint firstAttribute="height" priority="250" constant="150" id="ecC-HI-FXb"/>
+                                                    <constraint firstAttribute="bottom" secondItem="keY-dc-bFu" secondAttribute="bottom" constant="8" id="mRD-2w-NAO"/>
+                                                    <constraint firstItem="keY-dc-bFu" firstAttribute="top" secondItem="nF9-Z2-Hp6" secondAttribute="top" constant="8" id="rhj-8u-U5U"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="22"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="0.0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JE8-QA-Ijc" customClass="ShadowRoundView" customModule="BDS" customModuleProvider="target">
+                                                <rect key="frame" x="2" y="483" width="339" height="46"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" highlighted="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LoP-g4-cBZ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="339" height="46"/>
+                                                        <fontDescription key="fontDescription" name="Prompt-Medium" family="Prompt" pointSize="15"/>
+                                                        <inset key="titleEdgeInsets" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                        <state key="normal" title="เลือกวิธีชำระเงิน">
+                                                            <color key="titleColor" name="apGray1"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="choosePaymentButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zxk-Xv-Gzo"/>
+                                                        </connections>
+                                                    </button>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dropdown-indicator" translatesAutoresizingMaskIntoConstraints="NO" id="VXo-Ak-oYR">
+                                                        <rect key="frame" x="309" y="14" width="18" height="18"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="18" id="EUI-5c-hMn"/>
+                                                            <constraint firstAttribute="width" constant="18" id="kEV-ZK-EcA"/>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="18" id="ti0-XX-Pe9"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="46" id="8fh-cl-0ln"/>
+                                                    <constraint firstItem="VXo-Ak-oYR" firstAttribute="centerY" secondItem="JE8-QA-Ijc" secondAttribute="centerY" id="L1m-d2-yDG"/>
+                                                    <constraint firstItem="LoP-g4-cBZ" firstAttribute="leading" secondItem="JE8-QA-Ijc" secondAttribute="leading" id="VjR-JX-lyJ"/>
+                                                    <constraint firstAttribute="height" constant="46" id="aNL-Ie-DTJ"/>
+                                                    <constraint firstItem="LoP-g4-cBZ" firstAttribute="top" secondItem="JE8-QA-Ijc" secondAttribute="top" id="bO2-SS-hdI"/>
+                                                    <constraint firstAttribute="trailing" secondItem="VXo-Ak-oYR" secondAttribute="trailing" constant="12" id="jcI-zU-e1K"/>
+                                                    <constraint firstAttribute="bottom" secondItem="LoP-g4-cBZ" secondAttribute="bottom" id="npH-sX-vs9"/>
+                                                    <constraint firstAttribute="trailing" secondItem="LoP-g4-cBZ" secondAttribute="trailing" id="qqk-F1-Cg0"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="22"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D5r-dM-nwA" customClass="ShadowRoundView" customModule="BDS" customModuleProvider="target">
+                                                <rect key="frame" x="2" y="539" width="339" height="60"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="สาขา  --" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x7R-Jd-vZ9">
+                                                        <rect key="frame" x="70" y="8" width="154" height="25"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="25" id="X4d-95-fy3"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Prompt-Medium" family="Prompt" pointSize="16"/>
+                                                        <color key="textColor" name="apBlue"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ระยะทาง -- กิโลเมตร" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bLp-lB-1nu">
+                                                        <rect key="frame" x="70" y="33" width="154" height="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="20" id="XBJ-7U-516"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Prompt-Medium" family="Prompt" pointSize="13"/>
+                                                        <color key="textColor" name="apGray2"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OR5-w1-449" customClass="ShadowRoundView" customModule="BDS" customModuleProvider="target">
+                                                        <rect key="frame" x="239" y="15" width="85" height="30"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9t6-Bq-trc">
+                                                                <rect key="frame" x="0.0" y="0.0" width="85" height="30"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <fontDescription key="fontDescription" name="Prompt-Medium" family="Prompt" pointSize="13"/>
+                                                                <state key="normal" title="เปลี่ยนสาขา"/>
+                                                                <connections>
+                                                                    <action selector="goSiteChange:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LTc-bG-h0K"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <color key="backgroundColor" name="apBlue"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="30" id="g05-qF-BG1"/>
+                                                            <constraint firstAttribute="width" constant="85" id="qf2-SH-hEO"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="16"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="site_change_icon" translatesAutoresizingMaskIntoConstraints="NO" id="UxV-YX-TwK">
+                                                        <rect key="frame" x="20" y="10" width="35" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="TFw-mK-VLY"/>
+                                                            <constraint firstAttribute="width" constant="35" id="hdd-tZ-zic"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="x7R-Jd-vZ9" firstAttribute="leading" secondItem="UxV-YX-TwK" secondAttribute="trailing" constant="15" id="00w-AG-niH"/>
+                                                    <constraint firstItem="bLp-lB-1nu" firstAttribute="top" secondItem="x7R-Jd-vZ9" secondAttribute="bottom" id="0Cj-wl-uC6"/>
+                                                    <constraint firstItem="OR5-w1-449" firstAttribute="leading" secondItem="x7R-Jd-vZ9" secondAttribute="trailing" constant="15" id="0K6-eX-WIw"/>
+                                                    <constraint firstItem="UxV-YX-TwK" firstAttribute="leading" secondItem="D5r-dM-nwA" secondAttribute="leading" constant="20" id="0hL-fY-35i"/>
+                                                    <constraint firstItem="OR5-w1-449" firstAttribute="centerY" secondItem="D5r-dM-nwA" secondAttribute="centerY" id="A7e-ic-FxV"/>
+                                                    <constraint firstItem="UxV-YX-TwK" firstAttribute="centerY" secondItem="D5r-dM-nwA" secondAttribute="centerY" id="NKQ-CJ-ofB"/>
+                                                    <constraint firstItem="x7R-Jd-vZ9" firstAttribute="top" secondItem="D5r-dM-nwA" secondAttribute="top" constant="8" id="hOt-jj-9Kz"/>
+                                                    <constraint firstItem="OR5-w1-449" firstAttribute="leading" secondItem="bLp-lB-1nu" secondAttribute="trailing" constant="15" id="nLM-1N-RVS"/>
+                                                    <constraint firstItem="bLp-lB-1nu" firstAttribute="leading" secondItem="UxV-YX-TwK" secondAttribute="trailing" constant="15" id="ngS-gh-4gf"/>
+                                                    <constraint firstAttribute="trailing" secondItem="OR5-w1-449" secondAttribute="trailing" constant="15" id="vQx-yp-Rdt"/>
+                                                    <constraint firstAttribute="height" constant="60" id="xHO-2v-zXy"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="26"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jzq-mK-gJ9" userLabel="BtnView" customClass="ShadowRoundView" customModule="BDS" customModuleProvider="target">
+                                                <rect key="frame" x="2" y="609" width="339" height="45"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yqT-EY-I9T">
+                                                        <rect key="frame" x="0.0" y="0.0" width="339" height="45"/>
+                                                        <fontDescription key="fontDescription" name="Prompt-Medium" family="Prompt" pointSize="16"/>
+                                                        <state key="normal" title="ชำระสินค้า">
+                                                            <color key="titleColor" name="collectionViewBackground"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="goPaymentButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VGW-u2-o70"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" name="apBlue"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="yqT-EY-I9T" secondAttribute="trailing" id="6wZ-mZ-vdu"/>
+                                                    <constraint firstAttribute="height" constant="45" id="8ep-oW-3PI"/>
+                                                    <constraint firstItem="yqT-EY-I9T" firstAttribute="top" secondItem="jzq-mK-gJ9" secondAttribute="top" id="ABw-dj-eaQ"/>
+                                                    <constraint firstAttribute="bottom" secondItem="yqT-EY-I9T" secondAttribute="bottom" id="Kxm-EX-TSZ"/>
+                                                    <constraint firstItem="yqT-EY-I9T" firstAttribute="leading" secondItem="jzq-mK-gJ9" secondAttribute="leading" id="M31-e2-Ai8"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="22"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="D5r-dM-nwA" secondAttribute="trailing" constant="2" id="6WI-IP-WWR"/>
+                                            <constraint firstAttribute="trailing" secondItem="nF9-Z2-Hp6" secondAttribute="trailing" constant="2" id="GHw-nG-lXV"/>
+                                            <constraint firstItem="EKS-xN-4pE" firstAttribute="leading" secondItem="leh-FJ-WBN" secondAttribute="leading" constant="2" id="IJE-7J-Dt0"/>
+                                            <constraint firstAttribute="bottom" secondItem="jzq-mK-gJ9" secondAttribute="bottom" constant="70" id="JZf-QF-ydd"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="650" id="RRg-Gi-ITJ"/>
+                                            <constraint firstAttribute="trailing" secondItem="EKS-xN-4pE" secondAttribute="trailing" constant="2" id="SL0-gp-tcS"/>
+                                            <constraint firstItem="EKS-xN-4pE" firstAttribute="top" secondItem="leh-FJ-WBN" secondAttribute="top" constant="14" id="Tdb-qQ-sco"/>
+                                            <constraint firstItem="nF9-Z2-Hp6" firstAttribute="leading" secondItem="leh-FJ-WBN" secondAttribute="leading" constant="2" id="a3T-EJ-8Op"/>
+                                            <constraint firstAttribute="trailing" secondItem="JE8-QA-Ijc" secondAttribute="trailing" constant="2" id="b2x-2w-SHD"/>
+                                            <constraint firstItem="JE8-QA-Ijc" firstAttribute="top" secondItem="nF9-Z2-Hp6" secondAttribute="bottom" constant="10" id="d0y-sr-LAf"/>
+                                            <constraint firstAttribute="trailing" secondItem="jzq-mK-gJ9" secondAttribute="trailing" constant="2" id="gIa-79-KcQ"/>
+                                            <constraint firstItem="nF9-Z2-Hp6" firstAttribute="top" secondItem="EKS-xN-4pE" secondAttribute="bottom" constant="10" id="hFf-Di-IdD"/>
+                                            <constraint firstItem="JE8-QA-Ijc" firstAttribute="leading" secondItem="leh-FJ-WBN" secondAttribute="leading" constant="2" id="heT-sQ-FTX"/>
+                                            <constraint firstItem="jzq-mK-gJ9" firstAttribute="top" secondItem="D5r-dM-nwA" secondAttribute="bottom" constant="10" id="jcf-U4-G1A"/>
+                                            <constraint firstItem="D5r-dM-nwA" firstAttribute="top" secondItem="JE8-QA-Ijc" secondAttribute="bottom" constant="10" id="r9k-jL-tQN"/>
+                                            <constraint firstItem="jzq-mK-gJ9" firstAttribute="leading" secondItem="leh-FJ-WBN" secondAttribute="leading" constant="2" id="uWn-dr-7Bv"/>
+                                            <constraint firstItem="D5r-dM-nwA" firstAttribute="leading" secondItem="leh-FJ-WBN" secondAttribute="leading" constant="2" id="vUc-qh-YPr"/>
+                                            <constraint firstItem="jzq-mK-gJ9" firstAttribute="centerX" secondItem="leh-FJ-WBN" secondAttribute="centerX" id="xLz-CO-Ej2"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="leh-FJ-WBN" firstAttribute="top" secondItem="kbf-mi-Kjr" secondAttribute="top" id="FUx-Na-3BJ"/>
+                                    <constraint firstItem="leh-FJ-WBN" firstAttribute="leading" secondItem="kbf-mi-Kjr" secondAttribute="leading" id="Oz5-jF-9PE"/>
+                                    <constraint firstAttribute="trailing" secondItem="leh-FJ-WBN" secondAttribute="trailing" id="Rjc-u1-aeI"/>
+                                    <constraint firstItem="leh-FJ-WBN" firstAttribute="width" secondItem="kbf-mi-Kjr" secondAttribute="width" id="brz-jV-YWD"/>
+                                    <constraint firstItem="leh-FJ-WBN" firstAttribute="height" secondItem="kbf-mi-Kjr" secondAttribute="height" priority="750" id="poq-uI-Uaf"/>
+                                    <constraint firstAttribute="bottom" secondItem="leh-FJ-WBN" secondAttribute="bottom" id="rrg-Vx-awS"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kbf-mi-Kjr" secondAttribute="bottom" constant="10" id="ZaC-r1-l5b"/>
+                            <constraint firstItem="kbf-mi-Kjr" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="ckk-tH-VcB"/>
+                            <constraint firstItem="kbf-mi-Kjr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="jT4-Hw-9fh"/>
+                            <constraint firstItem="kbf-mi-Kjr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="soY-h7-VlE"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="jji-uH-Yqx"/>
+                    <connections>
+                        <outlet property="checkoutButtonView" destination="jzq-mK-gJ9" id="iRY-8m-ux5"/>
+                        <outlet property="checkoutListTableView" destination="BnV-P8-zdJ" id="O4a-bc-ZaD"/>
+                        <outlet property="choosePaymentButton" destination="LoP-g4-cBZ" id="PwM-yn-o7o"/>
+                        <outlet property="choosePaymentView" destination="JE8-QA-Ijc" id="YBR-uf-NGf"/>
+                        <outlet property="discountTableView" destination="wvZ-hI-Lka" id="hgx-ZG-t2c"/>
+                        <outlet property="discountTableWrap" destination="j29-8T-Tzt" id="rm0-3j-g8y"/>
+                        <outlet property="grandTotalLabel" destination="Kob-kF-rMk" id="5h5-qe-Rer"/>
+                        <outlet property="priceDetailView" destination="nF9-Z2-Hp6" id="1Bj-8Y-J8m"/>
+                        <outlet property="productDetailView" destination="EKS-xN-4pE" id="wVg-Bf-Boc"/>
+                        <outlet property="shipmentPriceLabel" destination="Mv1-pS-JcI" id="WEf-4g-S6x"/>
+                        <outlet property="siteChangeButtonView" destination="OR5-w1-449" id="Nie-LD-baf"/>
+                        <outlet property="siteChangeDistanceLabel" destination="bLp-lB-1nu" id="dTn-IH-ypy"/>
+                        <outlet property="siteChangeNameLabel" destination="x7R-Jd-vZ9" id="vS9-Ni-o9r"/>
+                        <outlet property="siteChangeView" destination="D5r-dM-nwA" id="ZDV-DC-YJT"/>
+                        <outlet property="totalDiscountLabel" destination="2kA-Cn-GDi" id="loU-tz-CPN"/>
+                        <outlet property="totalPriceLabel" destination="a1C-5n-L2S" id="fqn-bY-X9s"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="799.20000000000005" y="99.753694581280797"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="dropdown-indicator" width="21" height="12.666666984558105"/>
+        <image name="site_change_icon" width="40" height="29"/>
+        <namedColor name="apBlue">
+            <color red="0.30588235294117649" green="0.70588235294117652" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="apGray1">
+            <color red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="apGray2">
+            <color red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="collectionViewBackground">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
